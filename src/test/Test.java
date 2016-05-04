@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Test {
 	public static void main(String[] args) {
-//		double num1 = 4.6;
+		double num1 = 4.6;
 //		double num2 = 4;
 //		System.out.println(num2 - num1);
 //		
