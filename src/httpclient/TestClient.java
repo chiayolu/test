@@ -27,15 +27,16 @@ public class TestClient {
 
 	public void getMethod(){
 		 HttpClient client = new HttpClient();
-		 GetMethod get = new GetMethod("https://www.baidu.com/index.php?tn=monline_3_dg");
+		 GetMethod get = new GetMethod("https://gateway.gopay.com.cn/time.do");
 		 String response = "";
 		 try {
-		 System.out.println(client.executeMethod(get));
-		 //打印服务器返回的状态
-		 System.out.println(get.getStatusLine());
-		 //打印返回的信息
-		 response = get.getResponseBodyAsString();
-		 System.out.println(response);
+			 int returnDate = client.executeMethod(get);
+//			 System.out.println(returnDate);
+			 //打印服务器返回的状态
+	//		 System.out.println(get.getStatusLine());
+			 //打印返回的信息
+			 response = get.getResponseBodyAsString();
+			 System.out.println(response);
 		 } catch (HttpException e) {
 		
 		 // TODO Auto-generated catch block
