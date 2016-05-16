@@ -34,6 +34,31 @@ public class TestEmu {
 		// 枚举类型的常量和方法
 		String test = ColorEnum.Test;
 		ColorEnum col = ColorEnum.getColor();
+		
+		// 带有构造器的枚举
+		System.out.println(GenderEnum.man.getValue());
+		TestEmu testEmu = new TestEmu();
+		System.out.println(testEmu.getA(GenderEnum.man));
+		
+		// 遍历枚举
+		for (GenderEnum ge : GenderEnum.values()) {
+			System.out.println(ge.getValue());
+		}
+		
+		for (ColorEnum ce : ColorEnum.values()) {
+			System.out.println(ce);
+		}
+		
+		// 得到枚举的个数
+		System.out.println(ColorEnum.values().length);
+		
+		// 得到某个枚举的下标
+		System.out.println(ColorEnum.red.ordinal());
+	}
+	
+	
+	public String getA(GenderEnum genderEnum) {
+		return genderEnum.getValue();
 	}
 }
 
