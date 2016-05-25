@@ -30,6 +30,21 @@ public class TestTime {
 		Date date = new Date();
 		date = sdf.parse(strT);
 		System.out.println(sdf.format(date));
+		
+		// 判断时间先后，before方法
+		String strT2 = "2015-04-02 12:10:00";
+		Date date2 = sdf.parse(strT2);
+		System.out.println(date2.before(date));
+		
+		// 时间增加一年
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.add(Calendar.YEAR, 1);
+		System.out.println(calendar.getTime());
+		
+		// date增加10秒
+		Date date3 = new Date (date.getTime() + 24*60*60*1000);
+		System.out.println(sdf.format(date3));
 	}
 }
 

@@ -30,7 +30,7 @@ public class TestMap {
 		for (int i = 0; i < 10; i++) {
 			map.put(String.valueOf(i), String.valueOf((char)'a'+i));
 		}
-		
+		System.out.println(map.toString() + "\n\n\n");
 		
 		// map遍历的三种方式
 		// 方式一	效率高
