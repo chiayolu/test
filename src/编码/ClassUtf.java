@@ -49,6 +49,8 @@ public class ClassUtf {
 		
 		byte[] UTF_BOM = new byte[]{(byte) 0xEF,(byte) 0xBB,(byte) 0xBF};
 		System.out.println(URLDecoder.decode("0xEF", "utf-8"));
+		
+		System.out.println("输出到github");
 	}
 }
 
