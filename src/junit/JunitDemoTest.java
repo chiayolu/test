@@ -14,39 +14,35 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
- * ClassName:JunitDemoTest 
- * Function: TODO ADD FUNCTION. 
- * Reason:	 TODO ADD REASON. 
- * Date:     2016年5月5日 下午7:50:21 
- * @author   "jia"
- * @version  
- * @see 	 
+ * ClassName:JunitDemoTest Function: TODO ADD FUNCTION. Reason: TODO ADD REASON.
+ * Date: 2016年5月5日 下午7:50:21
+ * 
+ * @author "jia"
+ * @version
+ * @see
  */
 public class JunitDemoTest {
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
+	@Test(expected = ArithmeticException.class)
+	public void testMul() {
+		assertEquals(2, new JunitDemo().mul(6, 0));
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
+	@Ignore("ddd")
+	@Test(timeout = 50)
+	public void testTime() {
+		// try {
+		// Thread.sleep(100);
+		// } catch (InterruptedException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		while (true) {
+			System.out.println("aa");
+		}
 	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
 }
-
