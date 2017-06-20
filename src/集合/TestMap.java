@@ -8,6 +8,11 @@
 
 package 集合;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -25,7 +30,7 @@ import java.util.Set;
  * @see 	 
  */
 public class TestMap {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		Map<String, String> map = new HashMap<String, String>();
 		for (int i = 0; i < 10; i++) {
 			map.put(String.valueOf(i), String.valueOf((char)'a'+i));
@@ -59,7 +64,8 @@ public class TestMap {
 		}
 		
 
-		
+		Reader a = new FileReader("");
+		InputStream d = new FileInputStream("");
 	}
 }
 

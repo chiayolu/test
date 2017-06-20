@@ -28,7 +28,7 @@ public class TestJSON {
 		map.put("aa", "11");
 		map.put("bb", "22");
 		JSONObject jo = new JSONObject(map);
-		System.out.println(jo.toString());
+		System.out.println(jo.get("aa"));
 	}
 	 
 }
